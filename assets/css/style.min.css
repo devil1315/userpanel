@@ -19937,7 +19937,7 @@ button:focus {
 .btn-primary,
 .btn-success,
 .btn-warning {
-    color: #fff;
+    color: #fff !important;
 }
 
 .btn-danger.active,
@@ -28060,9 +28060,9 @@ html body .jqstooltip {
     padding: 0;
 }
 
-.table-responsive {
+/* .table-responsive {
     overflow-x: clip;
-}
+} */
 
 .table-responsive .dataTables_wrapper .dataTables_length select {
     padding-top: 0.25rem;
@@ -32601,9 +32601,11 @@ html[dir="rtl"] [type="radio"].material-inputs+label:before {
 .logo-icon .dark-logo {
     width: 42px;
 }
-.logo-text .dark-logo{
+
+.logo-text .dark-logo {
     width: 130px;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -32624,6 +32626,7 @@ input[type=number] {
     left: 15px;
     top: 8px;
 }
+
 .badge-active {
     background-color: #FDF7F0;
     color: #E0A96D;
@@ -32631,9 +32634,30 @@ input[type=number] {
     font-size: 12px;
     font-weight: 500;
 }
-.tea img{
-    width:160px;
+
+.tea img {
+    width: 160px;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
+}
+
+.para {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    white-space: normal !important;
+    max-width: 450px;
+}
+
+tbody tr:last-child {
+    border-bottom: transparent !important;
+}
+
+.footer a {
+    font-weight: 600;
 }

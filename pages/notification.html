@@ -336,124 +336,170 @@
         <div class="page-wrapper">
             <div class="page-titles d-flex justify-content-between align-items-center">
                 <h1 class="mb-0 fw-bold">Notifications</h1>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#add_notification" class="btn btn-primary">Add
+                    Notification</a>
             </div>
             <div class="container-fluid">
                 <div class="row mb-4">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <ul class="list-style-none" id="notification">
-                                    <li>
-                                        <div class="message-center message-body position-relative">
+                                <div class="d-lg-flex align-items-center mb-4 gap-3">
+                                    <div class="position-relative">
+                                        <input type="text" id="searchInput" class="form-control ps-5 radius-30"
+                                            placeholder="Search...">
+                                        <span class="position-absolute product-show">
+                                            <i class="fa fa-search"></i></span>
+                                    </div>
+                                </div>
+                                <div class="illustration" style="display: none; text-align: center;">
+                                    <img src="../assets/images/searchNo.svg" alt="No users found" style="width: 280px;">
+                                    <h3 class="mb-0">Oops!... no results found</h3>
+                                    <p class="mb-0">Please try another search</p>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table customize-table mb-0 v-middle text-nowrap table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="border-bottom border-top">Sr no.</th>
+                                                <th class="border-bottom border-top">Title</th>
+                                                <th class="border-bottom border-top">Description</th>
+                                                <th class="border-bottom border-top">Option</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableList">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    Roman Joined the Team!
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 para">Congratulate him Lorem ipsum dolor sit amet
+                                                        consectetur adipisicing elit. Repellat aut reprehenderit
+                                                        temporibus laudantium, deserunt odit repudiandae, voluptas dicta
+                                                        fuga sequi ratione optio sapiente placeat autem enim est magnam
+                                                        cumque. Dolor!</p>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#view_notification"
+                                                            class="btn btn-primary btn-sm">
+                                                            <i class="ri-eye-line"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-danger btn-sm">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    New message received
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 para">Salma sent you new message</p>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#view_notification"
+                                                            class="btn btn-primary btn-sm">
+                                                            <i class="ri-eye-line"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-danger btn-sm">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    Jolly completed tasks
+                                                </td>
+                                                <td>
+                                                    <p class="mb-0 para">Assign her new tasks</p>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <a href="#" data-bs-toggle="modal"
+                                                            data-bs-target="#view_notification"
+                                                            class="btn btn-primary btn-sm">
+                                                            <i class="ri-eye-line"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-danger btn-sm">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/1.jpg" alt="user"
-                                                        class="rounded-circle w-100 h-100">
-                                                    <span class="profile-status rounded-circle online"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        Roman Joined the Team!
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Congratulate
-                                                        him</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/2.jpg" alt="user"
-                                                        class="rounded-circle w-100">
-                                                    <span class="profile-status rounded-circle busy"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        New message received
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Salma
-                                                        sent you new message</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/4.jpg" alt="user"
-                                                        class="rounded-circle w-100">
-                                                    <span class="profile-status rounded-circle busy"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        New Payment received
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Check
-                                                        your earnings</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/5.jpg" alt="user"
-                                                        class="rounded-circle w-100">
-                                                    <span class="profile-status rounded-circle away"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        Jolly completed tasks
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Assign
-                                                        her new tasks</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/1.jpg" alt="user"
-                                                        class="rounded-circle w-100">
-                                                    <span class="profile-status rounded-circle online"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        Payment deducted
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">$230
-                                                        deducted from account</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <footer class="footer">
-                Copyright © <span id="year"></span>. All right reserved.
+                © Copyright by <a href="dashboard.html">Valvesync</a> <span id="year"></span>. All right reserved.
             </footer>
         </div>
     </div>
-
+    <div class="modal fade" id="add_notification" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Add Notification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" placeholder="Title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="desc">Description</label>
+                            <textarea type="text" class="form-control" rows="7" id="desc"
+                                placeholder="Description"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Add Notification</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="view_notification" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">View Notification</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse aspernatur
+                        aperiam,
+                        soluta hic suscipit voluptates earum illo consequuntur quod nihil exercitationem ipsum harum
+                        deserunt saepe impedit sapiente architecto asperiores! Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Explicabo esse aspernatur aperiam,
+                        soluta hic suscipit voluptates earum illo consequuntur quod nihil exercitationem ipsum harum
+                        deserunt saepe impedit sapiente architecto asperiores!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/app.min.js"></script>
@@ -465,6 +511,34 @@
     <script src="../assets/js/sidebarmenu.js"></script>
     <script src="../assets/js/feather.min.js"></script>
     <script src="../assets/js/custom.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#searchInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase().trim();
+                var foundUsers = false;
+
+                $("#tableList tr").each(function () {
+                    var name = $(this).find('td:nth-child(2)').text().toLowerCase();
+                    var found = name.includes(value);
+                    if (found) {
+                        $(this).show();
+                        foundUsers = true;
+                    } else {
+                        $(this).hide();
+                    }
+                    console.log(foundUsers)
+                });
+
+                if (!foundUsers) {
+                    $('.illustration').show();
+                    $('.table thead').hide();
+                } else {
+                    $('.illustration').hide();
+                    $('.table thead').show();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
