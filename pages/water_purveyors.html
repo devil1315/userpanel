@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Notification</title>
+    <title>Customer</title>
     <link rel="shortcut icon" href="../assets/images/logo-icon.png" type="image/x-icon">
     <link href="../assets/css/style.min.css" rel="stylesheet" />
     <link rel="stylesheet"
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
+
 
 <body>
     <div class="preloader">
@@ -279,12 +280,14 @@
                                 <span class="hide-menu">Gauges</span>
                             </a>
                         </li>
-                        <li class="sidebar-item ">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="water_purveyors.html">
+                        <li class="sidebar-item selected">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link active"
+                                href="water_purveyors.html">
                                 <i class="ri-briefcase-line"></i>
                                 <span class="hide-menu">Water Purveyors</span>
                             </a>
                         </li>
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="test.html">
                                 <i class="ri-user-follow-line"></i>
@@ -292,9 +295,8 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-item selected">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link active"
-                                href="notification.html">
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="notification.html">
                                 <i class="ri-notification-4-line"></i>
                                 <span class="hide-menu">Notifications</span>
                             </a>
@@ -335,114 +337,87 @@
 
         <div class="page-wrapper">
             <div class="page-titles d-flex justify-content-between align-items-center">
-                <h1 class="mb-0 fw-bold">Notifications</h1>
+                <h1 class="mb-0 fw-bold">Water Purveyors</h1>
+                <a href="addwaterpure.html" class="btn btn-primary">Add Water Purveyors</a>
             </div>
             <div class="container-fluid">
                 <div class="row mb-4">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <ul class="list-style-none" id="notification">
-                                    <li>
-                                        <div class="message-center message-body position-relative">
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/1.jpg" alt="user"
-                                                        class="rounded-circle w-100 h-100">
-                                                    <span class="profile-status rounded-circle online"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        Roman Joined the Team!
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Congratulate
-                                                        him</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/2.jpg" alt="user"
-                                                        class="rounded-circle w-100">
-                                                    <span class="profile-status rounded-circle busy"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        New message received
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Salma
-                                                        sent you new message</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/4.jpg" alt="user"
-                                                        class="rounded-circle w-100">
-                                                    <span class="profile-status rounded-circle busy"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        New Payment received
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Check
-                                                        your earnings</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/5.jpg" alt="user"
-                                                        class="rounded-circle w-100">
-                                                    <span class="profile-status rounded-circle away"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        Jolly completed tasks
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Assign
-                                                        her new tasks</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-
-                                            <a href="#"
-                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
-                                                <span class="user-img position-relative d-inline-block">
-                                                    <img src="../assets/images/users/1.jpg" alt="user"
-                                                        class="rounded-circle w-100">
-                                                    <span class="profile-status rounded-circle online"></span>
-                                                </span>
-                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
-                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
-                                                        Payment deducted
-                                                    </h5>
-                                                    <span
-                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">$230
-                                                        deducted from account</span>
-                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
-                                                        AM</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <div class="d-lg-flex align-items-center mb-4 gap-3">
+                                    <div class="position-relative">
+                                        <input type="text" id="searchInput" class="form-control ps-5 radius-30"
+                                            placeholder="Search...">
+                                        <span class="position-absolute product-show">
+                                            <i class="fa fa-search"></i></span>
+                                    </div>
+                                </div>
+                                <div class="illustration" style="display: none; text-align: center;">
+                                    <img src="../assets/images/searchNo.svg" alt="No users found" style="width: 280px;">
+                                    <h3 class="mb-0">Oops!... no results found</h3>
+                                    <p class="mb-0">Please try another search</p>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table customize-table mb-0 v-middle text-nowrap table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="border-bottom border-top">Sr no.</th>
+                                                <th class="border-bottom border-top">Name</th>
+                                                <th class="border-bottom border-top">Phone</th>
+                                                <th class="border-bottom border-top">Contact</th>
+                                                <th class="border-bottom border-top">Email Address</th>
+                                                <!-- <th class="border-bottom border-top">Calib Date</th>
+                                                <th class="border-bottom border-top">Calib Exp Date</th> -->
+                                                <th class="border-bottom border-top">Option</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableList">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    Twin Falls Water
+                                                </td>
+                                                <td>
+                                                    9876543210
+                                                </td>
+                                                <td>Shawn</td>
+                                                <td>lil@example.com</td>
+                                                <td>
+                                                    <div>
+                                                        <a href="#" class="btn btn-primary btn-sm">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-danger btn-sm">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    Jerome, Idaho
+                                                </td>
+                                                <td>
+                                                    9876543211
+                                                </td>
+                                                <td>Carla Colfack</td>
+                                                <td>carla@example.com</td>
+                                                <td>
+                                                    <div>
+                                                        <a href="#" class="btn btn-primary btn-sm">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-danger btn-sm">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -465,6 +440,34 @@
     <script src="../assets/js/sidebarmenu.js"></script>
     <script src="../assets/js/feather.min.js"></script>
     <script src="../assets/js/custom.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#searchInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase().trim();
+                var foundUsers = false;
+
+                $("#tableList tr").each(function () {
+                    var name = $(this).find('td:nth-child(3)').text().toLowerCase();
+                    var found = name.includes(value);
+                    if (found) {
+                        $(this).show();
+                        foundUsers = true;
+                    } else {
+                        $(this).hide();
+                    }
+                    console.log(foundUsers)
+                });
+
+                if (!foundUsers) {
+                    $('.illustration').show();
+                    $('.table thead').hide();
+                } else {
+                    $('.illustration').hide();
+                    $('.table thead').show();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
