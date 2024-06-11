@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+</head>
+
+<body>
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+        <div class="container">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card login-card">
+                        <div class="card-body">
+                            <div class="brand-wrapper text-center">
+                                <a class="navbar-brand" href="#">
+                                    <b class="logo-icon">
+                                        <img src="../../assets/images/logo-icon.png" alt="homepage" class="dark-logo">
+                                    </b>
+                                    <span class="logo-text">
+                                        <img src="../../assets/images/logo-text.png" alt="homepage" class="dark-logo">
+
+                                    </span>
+                                </a>
+                            </div>
+                            <h4 class="mb-0 text-center"><b>Welcome back</b></h4>
+                            <p class="login-card-description text-center">Please sign in your account by filling in your login
+                                details</p>
+                            <form id="loginForm" method="post">
+                                <div class="form-group">
+                                    <label for="email" class="fw-600">Email</label>
+                                    <input type="email" name="email" id="email" class="form-control mb-0"
+                                        placeholder="E.g johndoe@gmail.com">
+                                </div>
+                                <div class="form-group mb-0 position-relative">
+                                    <label for="password" class="fw-600">Password</label>
+                                    <input type="password" name="password" id="password" class="form-control mb-2"
+                                        placeholder="**********">
+                                    <a href="#" class="eye-span"
+                                        onclick="togglePasswordVisibility('password', 'PasswordIcon')">
+                                        <i id="PasswordIcon" class="ri-eye-line"></i>
+                                    </a>
+                                </div>
+                              
+                                <div class="mb-4 pb-2 d-flex justify-content-between align-items-center flex-wrap">
+                                    <div class="form-check ">
+                                        <input class="form-check-input" type="checkbox" value="" id="r-me" required="">
+                                        <label class="form-check-label" for="r-me">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href="forgot.html" class="forgot-password-link mb-0">Forgot password?</a>
+                                </div>
+                                <button name="login" id="login" class="btn btn-block login-btn mb-5" type="submit"
+                                    value="Login">Login</button>
+                                <div class="form-group position-relative mb-3">
+                                    <div class="hr"></div>
+                                    <h5 class="or">Or Log In With</h5>
+                                </div>
+                                <div class="form-group pt-3">
+                                    <div class="social ">
+                                        <div class="apple">
+                                            <a href="#">
+                                                <img src="../../assets/images/apple.svg" alt="">
+                                                <h6 class="mb-0">Apple</h6>
+                                            </a>
+                                        </div>
+                                        <div class="google">
+                                            <a href="#">
+                                                <img src="../../assets/images/google.svg" alt="">
+                                                <h6 class="mb-0">Google</h6>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center">
+                                    <p class="mb-0">Don’t have an account? <a href="signup.html" class="text-color">Create account</a>
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function togglePasswordVisibility(passwordFieldId, iconId) {
+            var passwordField = document.getElementById(passwordFieldId);
+            var icon = document.getElementById(iconId);
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.className = "ri-eye-off-line";
+            } else {
+                passwordField.type = "password";
+                icon.className = "ri-eye-line";
+            }
+        }
+    </script>
+</body>
+
+</html>

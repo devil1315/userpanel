@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Otp</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+</head>
+
+<body>
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+        <div class="container">
+            <div class="row no-gutters justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card login-card">
+                        <div class="card-body text-center">
+                            <div class="brand-wrapper">
+                                <a class="navbar-brand" href="#">
+                                    <b class="logo-icon">
+                                        <img src="../../assets/images/logo-icon.png" alt="homepage" class="dark-logo">
+                                    </b>
+                                    <span class="logo-text">
+                                        <img src="../../assets/images/logo-text.png" alt="homepage" class="dark-logo">
+
+                                    </span>
+                                </a>
+                            </div>
+                            <h4 class="mb-0"><b>Forget password</b></h4>
+                            <p class="login-card-description">Please enter the code we just sent to your email
+                                <a href="#" class="text-color">danielsnr.design@gmail.com</a>
+                            </p>
+                            <form id="loginForm" method="post" action="updatepassword.html">
+                                <div id="otpForm" class="otp-form d-flex ">
+                                    <input class="otp-form__code-input form-control" type="number" maxlength="" min="0" max="9">
+                                    <input class="otp-form__code-input form-control" type="number" maxlength="" min="0" max="9">
+                                    <input class="otp-form__code-input form-control" type="number" maxlength="" min="0" max="9">
+                                    <input class="otp-form__code-input form-control" type="number" maxlength="" min="0" max="9">
+                                </div>
+                                <p class="mt-4 mb-4">Didn’t receive OTP?<a href="#"
+                                        style="color: #000080;"><b> Resend</b></a>
+                                </p>
+                                <button name="submit" id="submit" class="btn btn-block login-btn"
+                                    type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    var otpInputs = document.querySelectorAll('.otp-form__code-input');
+    
+    otpInputs.forEach(function(input, index) {
+        input.addEventListener('input', function() {
+            if (this.value.length > 1) {
+                this.value = this.value.slice(0, 1);
+            }
+            if (this.value.length > 0) {
+                if (index < otpInputs.length - 1) {
+                    otpInputs[index + 1].focus(); 
+                }
+            } else {
+                if (index > 0) {
+                    otpInputs[index - 1].focus(); 
+                }
+            }
+        });
+
+        input.addEventListener('keydown', function(event) {
+            if (event.key === 'Backspace' && this.value.length === 0) {
+                if (index > 0) {
+                    otpInputs[index - 1].focus(); 
+                }
+            }
+        });
+    });
+});
+
+    </script>
+    <!-- <script>
+        const VERIFICATION_SUCCESS = "success";
+        const VERIFICATION_ERROR = "error";
+
+        document.querySelectorAll(".otp-form__code-input").forEach((element) => {
+            element.onkeypress = function (event) {
+                if (event.target.value.length == 1) {
+                    return false;
+                }
+            };
+            element.onkeyup = function (event) {
+                removeAllStatusClasses();
+                if (event.shiftKey && event.key == "Tab") {
+                    focusOnPreviousInput(element);
+                } else if (event.key == "Tab") {
+                    focusOnNextInput(element);
+                } else if (isANumber(event.key)) {
+                    event.target.value = event.key;
+                    focusOnNextInput(this);
+                    submitOtpCode();
+                }
+            };
+            element.onkeydown = function (event) {
+                removeAllStatusClasses();
+                if (event.keyCode == 8 || event.keyCode == 46) {
+                    if (event.target.value.length > 0) {
+                        event.target.value = "";
+                    } else {
+                        focusOnPreviousInput(element);
+                    }
+                } else if (isNonPrintableKey(event.keyCode) && isNaN(event.key)) {
+                    return false;
+                } else {
+                    event.target.value = "";
+                }
+            };
+            element.onclick = function (event) {
+                event.target.select();
+            };
+            element.onfocus = function (event) {
+                event.target.select();
+            };
+            element.onpaste = function (event) {
+                return false;
+            };
+        });
+
+        function focusOnNextInput(currentInput) {
+            let nextElement = currentInput.nextElementSibling;
+            if (nextElement == null) {
+                return;
+            } else if (
+                nextElement.hasAttribute("id") &&
+                nextElement.getAttribute("id") == "seperator"
+            ) {
+                nextElement.nextElementSibling.focus();
+            } else {
+                nextElement.focus();
+            }
+        }
+
+        function focusOnPreviousInput(currentInput) {
+            let previousElement = currentInput.previousElementSibling;
+            if (previousElement == null) {
+                return;
+            } else if (
+                previousElement.hasAttribute("id") &&
+                previousElement.getAttribute("id") == "seperator"
+            ) {
+                previousElement.previousElementSibling.focus();
+            } else {
+                previousElement.focus();
+            }
+        }
+
+        function isANumber(key) {
+            return /^[0-9]$/i.test(key);
+        }
+
+        function isNonPrintableKey(keyCode) {
+            return keyCode.length !== 1 || keyCode === "\x00";
+        }
+
+        function getInputedCode() {
+            let code = "";
+            document.querySelectorAll(".otp-form__code-input").forEach((element) => {
+                code += element.value;
+            });
+            return code;
+        }
+
+        function submitOtpCode() {
+            let code = getInputedCode();
+            if (code.length == 6) {
+                verifyOtpCode(code)
+                    ? showVerificationStatus(VERIFICATION_SUCCESS)
+                    : showVerificationStatus(VERIFICATION_ERROR);
+            }
+        }
+
+        function verifyOtpCode(code) {
+            return code == "326178";
+        }
+
+        function showVerificationStatus(statusStyleClass) {
+            switch (statusStyleClass) {
+                case "success":
+                    updateElementStyle(
+                        VERIFICATION_SUCCESS,
+                        VERIFICATION_ERROR,
+                        "Verification Success",
+                        "#4bb543"
+                    );
+                    document
+                        .querySelectorAll(".otp-form__code-input")
+                        .forEach((element) => {
+                            element.disabled = true;
+                        });
+                    break;
+                case "error":
+                    updateElementStyle(
+                        VERIFICATION_ERROR,
+                        VERIFICATION_SUCCESS,
+                        "Verification Failed",
+                        "#ff9494"
+                    );
+                    break;
+            }
+        }
+
+        function updateElementStyle(
+            styleClassToAdd,
+            styleClassToRemove,
+            message,
+            color
+        ) {
+            document.querySelectorAll(".otp-form__code-input").forEach((element) => {
+                element.classList.add(styleClassToAdd);
+                element.classList.remove(styleClassToRemove);
+            });
+            document.getElementById("verificationResult").innerText = message;
+            document.getElementById("verificationResult").style.color = color;
+        }
+
+        function removeAllStatusClasses() {
+            document.querySelectorAll(".otp-form__code-input").forEach((element) => {
+                element.classList.remove(VERIFICATION_SUCCESS);
+                element.classList.remove(VERIFICATION_ERROR);
+            });
+        }
+
+    </script> -->
+</body>
+
+</html>

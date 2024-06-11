@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Assembly</title>
+    <link rel="shortcut icon" href="../assets/images/logo-icon.png" type="image/x-icon">
+    <link href="../assets/css/style.min.css" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+
+<body>
+    <div class="preloader">
+        <div class="tea lds-ripple">
+            <img src="../assets/images/waterlogo.svg" alt="" >
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header">
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
+                            class="ri-close-line ri-menu-2-line fs-6"></i></a>
+                    <a class="navbar-brand" href="index.html">
+                        <b class="logo-icon">
+                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+
+                        <span class="logo-text">
+                            <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                            <!-- <img
+                  src="../assets/images/logo-light-text.png"
+                  class="light-logo"
+                  alt="homepage"
+                /> -->
+                        </span>
+                    </a>
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i
+                            class="ri-more-line fs-6"></i>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse bg-white" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link sidebartoggler d-none d-md-block" href="javascript:void(0)"><i
+                                    data-feather="menu"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item search-box">
+                            <a class="nav-link" href="javascript:void(0)">
+                                <i data-feather="search"></i>
+                            </a>
+                            <form class="app-search position-absolute">
+                                <input type="text" class="form-control border-0" placeholder="Search &amp; enter" />
+                                <a class="srh-btn"><i data-feather="x-circle" class="feather-sm text-muted"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="2" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i data-feather="bell"></i>
+                                <div class="notify">
+                                    <span class="point bg-warning"></span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu mailbox dropdown-menu-end dropdown-menu-animate-up"
+                                aria-labelledby="2">
+                                <ul class="list-style-none">
+                                    <li>
+                                        <div class="rounded-top p-30 pb-2 d-flex align-items-center">
+                                            <h3 class="card-title mb-0">Notifications</h3>
+                                            <span class="badge bg-primary ms-3">5 new</span>
+                                        </div>
+                                    </li>
+                                    <li class="p-30 pt-0">
+                                        <div class="message-center message-body position-relative">
+                                            <a href="javascript:void(0)"
+                                                class="message-item px-2 d-flex align-items-center border-bottompy-3">
+                                                <span class="user-img position-relative d-inline-block">
+                                                    <img src="../assets/images/users/1.jpg" alt="user"
+                                                        class="rounded-circle w-100" />
+                                                    <span class="profile-status rounded-circle online"></span>
+                                                </span>
+                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
+                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
+                                                        Roman Joined the Team!
+                                                    </h5>
+                                                    <span
+                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Congratulate
+                                                        him</span>
+                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
+                                                        AM</span>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0)"
+                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
+                                                <span class="user-img position-relative d-inline-block">
+                                                    <img src="../assets/images/users/2.jpg" alt="user"
+                                                        class="rounded-circle w-100" />
+                                                    <span class="profile-status rounded-circle busy"></span>
+                                                </span>
+                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
+                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
+                                                        New message received
+                                                    </h5>
+                                                    <span
+                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Salma
+                                                        sent you new message</span>
+                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
+                                                        AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
+                                                <span class="user-img position-relative d-inline-block">
+                                                    <img src="../assets/images/users/4.jpg" alt="user"
+                                                        class="rounded-circle w-100" />
+                                                    <span class="profile-status rounded-circle busy"></span>
+                                                </span>
+                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
+                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
+                                                        New Payment received
+                                                    </h5>
+                                                    <span
+                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Check
+                                                        your earnings</span>
+                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
+                                                        AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item px-2 d-flex align-items-center py-3">
+                                                <span class="user-img position-relative d-inline-block">
+                                                    <img src="../assets/images/users/5.jpg" alt="user"
+                                                        class="rounded-circle w-100" />
+                                                    <span class="profile-status rounded-circle away"></span>
+                                                </span>
+                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
+                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
+                                                        Jolly completed tasks
+                                                    </h5>
+                                                    <span
+                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Assign
+                                                        her new tasks</span>
+                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
+                                                        AM</span>
+                                                </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)"
+                                                class="message-item px-2 d-flex align-items-center py-3">
+                                                <span class="user-img position-relative d-inline-block">
+                                                    <img src="../assets/images/users/1.jpg" alt="user"
+                                                        class="rounded-circle w-100" />
+                                                    <span class="profile-status rounded-circle online"></span>
+                                                </span>
+                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
+                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
+                                                        Payment deducted
+                                                    </h5>
+                                                    <span
+                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">$230
+                                                        deducted from account</span>
+                                                    <span class="fs-2 text-nowrap d-block subtext text-muted">9:08
+                                                        AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="mt-4">
+                                            <a class="btn btn-info text-white" href="javascript:void(0);">
+                                                See all messages
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown profile-dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="../assets/images/users/user.jpg" alt="user" width="45" height="45"
+                                class="rounded-circle" />
+                                <div class="d-none d-md-flex">
+                                    <span class="ms-2">
+                                        <span class="text-dark fw-bold">Johnathan</span></span>
+                                    <span>
+                                        <i data-feather="chevron-down" class="feather-sm"></i>
+                                    </span>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end mailbox dropdown-menu-animate-up">
+                                <ul class="list-style-none">
+                                    <li class="p-30 pb-2">
+                                        <div class="rounded-top d-flex align-items-center">
+                                            <h3 class="card-title mb-0">User Profile</h3>
+                                            <div class="ms-auto">
+                                                <a href="javascript:void(0)" class="link py-0">
+                                                    <i data-feather="x-circle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center mt-4 pt-3 pb-4 border-bottom">
+                                            <img src="../assets/images/users/user.jpg" alt="user" width="90"
+                                                class="rounded-circle" />
+                                            <div class="ms-4">
+                                                <h4 class="mb-0">Johnathan Doe</h4>
+                                                <span class="text-muted">Administrator</span>
+                                                <p class="text-muted mb-0 mt-1">
+                                                    <i data-feather="mail" class="feather-sm me-1"></i>
+                                                    info@Flexy.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="p-30 pt-0">
+                                        <div class="message-body position-relative">
+                                            <a href="profile.html"
+                                                class="message-item px-2 d-flex align-items-center border-bottom py-3">
+                                                <span class="btn btn-light-info btn-rounded-lg text-info">
+                                                    <i class="ri-shield-user-line feather-sm fill-white"></i>
+                                                </span>
+                                                <div class="w-75 d-inline-block v-middle ps-3 ms-1">
+                                                    <h5 class="message-title mb-0 mt-1 fs-4 font-weight-medium">
+                                                        My Profile
+                                                    </h5>
+                                                    <span
+                                                        class="fs-3 text-nowrap d-block time text-truncate fw-normal mt-1 text-muted">Account
+                                                        Settings</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="mt-4">
+                                            <a class="btn btn-info text-white" href="./Authentication/login.html">
+                                                Logout
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="left-sidebar">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="dashboard.html">
+                                <i class="ri-home-5-line"></i>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item selected">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="customer.html">
+                                <i class="ri-group-line"></i>
+                                <span class="hide-menu">Customers</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="test.html">
+                                <i class="ri-user-follow-line"></i>
+                                <span class="hide-menu">Tests</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="notification.html">
+                                <i class="ri-notification-4-line"></i>
+                                <span class="hide-menu">Notifications</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="about.html">
+                                <i class="ri-id-card-line"></i>
+                                <span class="hide-menu">About Us</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="terms.html">
+                                <i class="ri-file-edit-line"></i>
+                                <span class="hide-menu">Terms & Conditions</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="privacy.html">
+                                <i class="ri-folder-shield-2-line"></i>
+                                <span class="hide-menu">Privacy Policy</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html">
+                                <i class="ri-shield-user-line"></i>
+                                <span class="hide-menu">Profile</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <div class="page-wrapper">
+            <div class="page-titles d-flex justify-content-between align-items-center">
+                <h1 class="mb-0 fw-bold">Add Assembly</h1>
+                <a href="#" onclick="history.back()" class="btn btn-primary">Back</a>
+            </div>
+            <div class="container-fluid">
+                <div class="row mb-4">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="customerView.html">
+                                    <div class="row mb-4">
+                                        <div class="col-lg-4">
+                                            <label for="type">Type</label>
+                                            <select class="form-control">
+                                                <option value="" selected="" disabled="" hidden="">Select Type</option>
+                                                <option value="1">Double Check</option>
+                                                <option value="2">Double Check Detector Assembly</option>
+                                                <option value="3">Reduced Pressure Zone Assembly </option>
+                                                <option value="4">Reduced Pressure Detector Assembly </option>
+                                                <option value="5">Pressure Vacuum Breaker</option>
+                                                <option value="6">Spill-Resistant Vacuum Breaker</option>
+                                                <option value="7">Air-Gap</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="wp">Water Purveyor</label>
+                                            <select class="form-control">
+                                                <option value="" selected="" disabled="" hidden="">Select Water Purveyor
+                                                </option>
+                                                <option value="1">Hailey, ID</option>
+                                                <option value="2">Jerome, Idaho</option>
+                                                <option value="3">Twin Falls Water</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="size">Size</label>
+                                            <select class="form-control">
+                                                <option value="" selected disabled hidden>Select size</option>
+                                                <option value="1/4">1/4"</option>
+                                                <option value="1/2">1/2"</option>
+                                                <option value="3/4">3/4"</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-lg-4">
+                                            <label for="manufacture">Manufacturer</label>
+                                            <select class="form-control">
+                                                <option value="" selected disabled hidden>Select manufacturer</option>
+                                                <option value="american">American Dish</option>
+                                                <option value="apollo">Apollo</option>
+                                                <option value="ames">Ames</option>
+                                                <option value="ari">A.R.I.</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="model">Model</label>
+                                            <select class="form-control">
+                                                <option value="" selected disabled hidden>Select model</option>
+                                                <option value="001M1">001 M1</option>
+                                                <option value="001M1QT">001M1QT</option>
+                                            </select>
+                                        </div> 
+                                        <div class="col-lg-4">
+                                            <label for="serial">Serial</label>
+                                            <input type="text" placeholder="Enter serial no."
+                                            class="form-control" id="serial">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-lg-4">
+                                            <label for="email">Email</label>
+                                            <input type="text" placeholder="Enter email"
+                                                class="form-control" id="email">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="hazard">Hazard type</label>
+                                            <select class="form-control">
+                                                <option value="" selected disabled hidden>Select hazard type</option>
+                                                <option value="irrigation">Irrigation</option>
+                                                <option value="boiler">Boiler</option>
+                                            </select>
+                                        </div>   
+                                        <div class="col-lg-4">
+                                            <label for="testing">Testing frequency</label>
+                                            <select class="form-select" >
+                                                <option selected="selected" disabled="" hidden="" >Select testing frequency</option>
+                                                <option  value="test_annually">Annually</option>
+                                                <option value="test_semi_annually">Semi-Annually</option>
+                                                <option value="test_quarterly">Quarterly</option>
+                                                <option value="test_monthly">Monthly</option>
+                                                <option value="test_every_2_months">Every 2 Months</option>
+                                                <option value="test_every_year_and_half">Every 1.5 Years</option>
+                                                <option value="test_bi_annually">Every 2 Years</option>
+                                                <option value="test_every_2_and_half_years">Every 2.5 Years</option>
+                                                <option value="test_tri_annually">Every 3 years</option>
+                                                <option value="test_every_3_and_half_years">Every 3.5 Years</option>
+                                                <option value="test_every_4_years">Every 4 Years</option>
+                                                <option value="test_every_4_and_half_years">Every 4.5 Years</option>
+                                                <option value="test_every_5_years">Every 5 Years</option>
+                                                <option value="test_every_5_and_half_years">Every 5.5 Years</option>
+                                                <option value="test_every_6_years">Every 6 Years</option>
+                                                <option value="test_every_6_and_half_years">Every 6.5 Years</option>
+                                                <option value="test_every_7_years">Every 7 Years</option></select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                        <div class="col-lg-4">
+                                            <label for="nmonth">Notification month</label>
+                                            <select class="form-select" >
+                                                <option value="" selected="" hidden="" disabled="" >Select month</option>
+                                                <option value="january">January</option>
+                                                <option value="february">February</option>
+                                                <option value="march">March</option>
+                                                <option selected="selected" value="april">April</option>
+                                                <option value="may">May</option>
+                                                <option value="june">June</option>
+                                                <option value="july">July</option>
+                                                <option value="august">August</option>
+                                                <option value="september">September</option>
+                                                <option value="october">October</option>
+                                                <option value="november">November</option>
+                                                <option value="december">December</option></select>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="idate">Install date</label>
+                                           <input type="date" class="form-control" placeholder="Select install date">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="ltested">Last tested</label>
+                                           <input type="date" class="form-control" placeholder="Select install date">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-4">
+                                  
+                                        <div class="col-lg-4">
+                                            <label for="ntdate">Next test due</label>
+                                           <input type="date" class="form-control" placeholder="Select install date">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="lnotified">Last notified</label>
+                                           <input type="date" class="form-control" placeholder="Select last notified date">
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label for="rat">Remove at</label>
+                                           <input type="date" class="form-control" placeholder="Select Remove at date">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <!-- <a href="#" class="btn btn-primary">Add Customer</a> -->
+                                        <button type="submit" class="btn btn-primary">Add Customer</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                Copyright © <span id="year">2024</span>. All right reserved.
+            </footer>
+        </div>
+    </div>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/app.min.js"></script>
+    <script src="../assets/js/app.init.js"></script>
+    <script src="../assets/js/app-style-switcher.js"></script>
+    <script src="../assets/js/perfect-scrollbar.jquery.js"></script>
+    <script src="../assets/js/jquery.sparkline.min.js"></script>
+    <script src="../assets/js/waves.js"></script>
+    <script src="../assets/js/sidebarmenu.js"></script>
+    <script src="../assets/js/feather.min.js"></script>
+    <script src="../assets/js/custom.min.js"></script>
+</body>
+
+</html>
