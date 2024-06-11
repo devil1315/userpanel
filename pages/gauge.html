@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard</title>
+    <title>Customer</title>
     <link rel="shortcut icon" href="../assets/images/logo-icon.png" type="image/x-icon">
     <link href="../assets/css/style.min.css" rel="stylesheet" />
     <link rel="stylesheet"
@@ -13,19 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
-<style>
-    .chart-container {
-        position: relative;
-        margin: auto;
-        height: 80vh;
-        width: 80vw;
-    }
-</style>
+
 
 <body>
     <div class="preloader">
         <div class="tea lds-ripple">
-            <img src="../assets/images/waterlogo.svg" alt="" >
+            <img src="../assets/images/waterlogo.svg" alt="">
         </div>
     </div>
 
@@ -200,7 +193,7 @@
                             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="../assets/images/users/user.jpg" alt="user" width="45" height="45"
-                                class="rounded-circle" />
+                                    class="rounded-circle" />
                                 <div class="d-none d-md-flex">
                                     <span class="ms-2">
                                         <span class="text-dark fw-bold">Johnathan</span></span>
@@ -268,25 +261,26 @@
             <div class="scroll-sidebar">
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item selected">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="dashboard.html">
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="dashboard.html">
                                 <i class="ri-home-5-line"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="customer.html">
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="customer.html">
                                 <i class="ri-group-line"></i>
                                 <span class="hide-menu">Customers</span>
                             </a>
                         </li>
-                        <li class="sidebar-item ">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="gauge.html">
+                        <li class="sidebar-item selected">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="gauge.html">
                                 <i class="ri-dashboard-3-line"></i>
                                 <span class="hide-menu">Gauges</span>
                             </a>
                         </li>
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="test.html">
                                 <i class="ri-user-follow-line"></i>
@@ -335,82 +329,101 @@
         </aside>
 
         <div class="page-wrapper">
-            <div class="page-titles">
-                <div class="row">
-                    <div class="col-lg-8 col-md-6 col-12 align-self-center">
-                        <h4 class="text-muted mb-0 fw-normal">Welcome Johnathan</h4>
-                        <h1 class="mb-0 fw-bold">Dashboard</h1>
-                    </div>
-                </div>
+            <div class="page-titles d-flex justify-content-between align-items-center">
+                <h1 class="mb-0 fw-bold">Gauges</h1>
+                <a href="gaugeAdd.html" class="btn btn-primary">Add Gauge</a>
             </div>
             <div class="container-fluid">
                 <div class="row mb-4">
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="customer.html" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Customers</span>
-                                        </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-group-3-line"></i>
-                                        </span>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-lg-flex align-items-center mb-4 gap-3">
+                                    <div class="position-relative">
+                                        <input type="text" id="searchInput" class="form-control ps-5 radius-30"
+                                            placeholder="Search...">
+                                        <span class="position-absolute product-show">
+                                            <i class="fa fa-search"></i></span>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="test.html" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Tests</span>
-                                        </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-user-follow-line"></i>
-                                        </span>
-                                    </div>
+                                <div class="illustration" style="display: none; text-align: center;">
+                                    <img src="../assets/images/searchNo.svg" alt="No users found" style="width: 280px;">
+                                    <h3 class="mb-0">Oops!... no results found</h3>
+                                    <p class="mb-0">Please try another search</p>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="#" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Email Templates</span>
-                                        </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-mail-line"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                                <div class="table-responsive">
+                                    <table class="table customize-table mb-0 v-middle text-nowrap table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="border-bottom border-top">Sr no.</th>
+                                                <th class="border-bottom border-top">Tester</th>
+                                                <th class="border-bottom border-top">Gauge Serial</th>
+                                                <th class="border-bottom border-top">Manufacturer</th>
+                                                <th class="border-bottom border-top">Model</th>
+                                                <th class="border-bottom border-top">Calib Date</th>
+                                                <th class="border-bottom border-top">Calib Exp Date</th>
+                                                <th class="border-bottom border-top">Option</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tableList">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    Cody Creek
+                                                </td>
+                                                <td>
+                                                    0051080
+                                                </td>
+                                                <td>Watts</td>
+                                                <td>TK-99E</td>
+                                                <td>06-14-2023</td>
+                                                <td>06-14-2024</td>
+                                                <!-- <td>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" role="switch"
+                                                            id="flexSwitchCheckDefault">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckDefault"></label>
+                                                    </div>
+                                                </td> -->
+                                                <td>
+                                                    <div>
+                                                        <a href="guageEdit.html" class="btn btn-primary btn-sm">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-danger btn-sm">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    Cody Creek
+                                                </td>
+                                                <td>
+                                                    0051080
+                                                </td>
+                                                <td>Watts</td>
+                                                <td>TK-99E</td>
+                                                <td>06-14-2023</td>
+                                                <td>06-14-2024</td>
+                                                <td>
+                                                    <div>
 
-                <div class="col-lg-12">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-md-flex align-items-center">
-                                <div>
-                                    <h3 class="card-title">Overview</h3>
+                                                        <a href="guageEdit.html" class="btn btn-primary btn-sm">
+                                                            <i class="ri-edit-box-line"></i>
+                                                        </a>
+                                                        <a href="#" class="btn btn-danger btn-sm">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                            </div>
-                            <div class="chart-container">
-                                <canvas id="chart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -433,47 +446,32 @@
     <script src="../assets/js/sidebarmenu.js"></script>
     <script src="../assets/js/feather.min.js"></script>
     <script src="../assets/js/custom.min.js"></script>
-    <!-- <script src="../assets/js/apexcharts.min.js"></script>
-    <script src="../assets/js/dashboard1.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
     <script>
-        var data = {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-            datasets: [
-                {
-                    label: "Dataset #1",
-                    backgroundColor: "rgba(0,0,128,0.2)",
-                    borderColor: "rgba(0,0,128,1)",
-                    borderWidth: 2,
-                    hoverBackgroundColor: "rgba(0,0,128,0.4)",
-                    hoverBorderColor: "rgba(0,0,128,1)",
-                    data: [65, 59, 20, 81, 56, 55, 40],
-                },
-            ],
-        };
+        $(document).ready(function () {
+            $("#searchInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase().trim();
+                var foundUsers = false;
 
-        var options = {
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    stacked: true,
-                    grid: {
-                        display: true,
-                        color: "rgba(255,99,132,0.2)",
-                    },
-                },
-                x: {
-                    grid: {
-                        display: false,
-                    },
-                },
-            },
-        };
+                $("#tableList tr").each(function () {
+                    var name = $(this).find('td:nth-child(3)').text().toLowerCase();
+                    var found = name.includes(value);
+                    if (found) {
+                        $(this).show();
+                        foundUsers = true;
+                    } else {
+                        $(this).hide();
+                    }
+                    console.log(foundUsers)
+                });
 
-        new Chart("chart", {
-            type: "bar",
-            options: options,
-            data: data,
+                if (!foundUsers) {
+                    $('.illustration').show();
+                    $('.table thead').hide();
+                } else {
+                    $('.illustration').hide();
+                    $('.table thead').show();
+                }
+            });
         });
     </script>
 </body>

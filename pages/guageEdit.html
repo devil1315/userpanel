@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard</title>
+    <title>Customer</title>
     <link rel="shortcut icon" href="../assets/images/logo-icon.png" type="image/x-icon">
     <link href="../assets/css/style.min.css" rel="stylesheet" />
     <link rel="stylesheet"
@@ -13,19 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
-<style>
-    .chart-container {
-        position: relative;
-        margin: auto;
-        height: 80vh;
-        width: 80vw;
-    }
-</style>
+
 
 <body>
     <div class="preloader">
         <div class="tea lds-ripple">
-            <img src="../assets/images/waterlogo.svg" alt="" >
+            <img src="../assets/images/waterlogo.svg" alt="">
         </div>
     </div>
 
@@ -200,7 +193,7 @@
                             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="../assets/images/users/user.jpg" alt="user" width="45" height="45"
-                                class="rounded-circle" />
+                                    class="rounded-circle" />
                                 <div class="d-none d-md-flex">
                                     <span class="ms-2">
                                         <span class="text-dark fw-bold">Johnathan</span></span>
@@ -268,21 +261,21 @@
             <div class="scroll-sidebar">
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item selected">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="dashboard.html">
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="dashboard.html">
                                 <i class="ri-home-5-line"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="customer.html">
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="customer.html">
                                 <i class="ri-group-line"></i>
                                 <span class="hide-menu">Customers</span>
                             </a>
                         </li>
-                        <li class="sidebar-item ">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="gauge.html">
+                        <li class="sidebar-item selected">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="gauge.html">
                                 <i class="ri-dashboard-3-line"></i>
                                 <span class="hide-menu">Gauges</span>
                             </a>
@@ -335,82 +328,57 @@
         </aside>
 
         <div class="page-wrapper">
-            <div class="page-titles">
-                <div class="row">
-                    <div class="col-lg-8 col-md-6 col-12 align-self-center">
-                        <h4 class="text-muted mb-0 fw-normal">Welcome Johnathan</h4>
-                        <h1 class="mb-0 fw-bold">Dashboard</h1>
-                    </div>
-                </div>
+            <div class="page-titles d-flex justify-content-between align-items-center">
+                <h1 class="mb-0 fw-bold">Edit Gauge</h1>
+                <a href="#" onclick="history.back()" class="btn btn-primary">Back</a>
             </div>
             <div class="container-fluid">
                 <div class="row mb-4">
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="customer.html" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Customers</span>
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="guage.html">
+                                    <div class="row ">
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="tester">Tester</label>
+                                            <select class="form-select" id="tester">
+                                                <option value="1" selected="">Cody Creek</option>
+                                                <option value="2">Jhon doe</option>
+                                                <option value="3">Lily Jhonsen</option>
+                                            </select>
                                         </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-group-3-line"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="test.html" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Tests</span>
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="serial">Serial</label>
+                                            <input type="number" value="0051080" class="form-control" id="serial">
                                         </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-user-follow-line"></i>
-                                        </span>
                                     </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="#" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Email Templates</span>
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="manufacturer">Manufacturer</label>
+                                            <input type="text" value="Watts" class="form-control" id="manufacturer">
                                         </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-mail-line"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                                        <div class="col-lg-6  mb-3">
+                                            <label for="model">Model</label>
+                                            <input type="text" value="TK-99E" class="form-control" id="model">
+                                        </div>
 
-                <div class="col-lg-12">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-md-flex align-items-center">
-                                <div>
-                                    <h3 class="card-title">Overview</h3>
-                                </div>
-                            </div>
-                            <div class="chart-container">
-                                <canvas id="chart"></canvas>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="cdate">Calibration Date</label>
+                                            <input type="date" class="form-control" id="cdate" value="2023-06-14">
+                                        </div>
+                                        <div class="col-lg-6 mb-3">
+                                            <label for="expdate">Calibration Expiration Date</label>
+                                            <input type="date" class="form-control" id="expdate" value="2024-06-14">
+                                        </div>
+
+                                    </div>
+
+                                    <div>
+                                        <button type="submit" class="btn btn-primary">Update Gauge</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -433,49 +401,6 @@
     <script src="../assets/js/sidebarmenu.js"></script>
     <script src="../assets/js/feather.min.js"></script>
     <script src="../assets/js/custom.min.js"></script>
-    <!-- <script src="../assets/js/apexcharts.min.js"></script>
-    <script src="../assets/js/dashboard1.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
-    <script>
-        var data = {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-            datasets: [
-                {
-                    label: "Dataset #1",
-                    backgroundColor: "rgba(0,0,128,0.2)",
-                    borderColor: "rgba(0,0,128,1)",
-                    borderWidth: 2,
-                    hoverBackgroundColor: "rgba(0,0,128,0.4)",
-                    hoverBorderColor: "rgba(0,0,128,1)",
-                    data: [65, 59, 20, 81, 56, 55, 40],
-                },
-            ],
-        };
-
-        var options = {
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    stacked: true,
-                    grid: {
-                        display: true,
-                        color: "rgba(255,99,132,0.2)",
-                    },
-                },
-                x: {
-                    grid: {
-                        display: false,
-                    },
-                },
-            },
-        };
-
-        new Chart("chart", {
-            type: "bar",
-            options: options,
-            data: data,
-        });
-    </script>
 </body>
 
 </html>
