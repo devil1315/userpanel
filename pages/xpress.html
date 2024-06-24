@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dashboard</title>
+    <title>Customer</title>
     <link rel="shortcut icon" href="../assets/images/logo-icon.png" type="image/x-icon">
     <link href="../assets/css/style.min.css" rel="stylesheet" />
     <link rel="stylesheet"
@@ -13,18 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
-<style>
-    .chart-container {
-        position: relative;
-        margin: auto;
-        height: 80vh;
-        width: 80vw;
-    }
 
-    .modal {
-        --bs-modal-width: 700px !important;
-    }
-</style>
 
 <body>
     <div class="preloader">
@@ -272,15 +261,15 @@
             <div class="scroll-sidebar">
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item selected">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link active" href="dashboard.html">
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="dashboard.html">
                                 <i class="ri-home-5-line"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
 
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="customer.html">
+                        <li class="sidebar-item ">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link " href="customer.html">
                                 <i class="ri-group-line"></i>
                                 <span class="hide-menu">Customers</span>
                             </a>
@@ -345,197 +334,150 @@
         </aside>
 
         <div class="page-wrapper">
-            <div class="page-titles">
-                <div class="d-flex justify-content-between align-items-center flex-wrap">
-                    <div class="">
-                        <h4 class="text-muted mb-0 fw-normal">Welcome Johnathan</h4>
-                        <h1 class="mb-0 fw-bold">Dashboard</h1>
-                    </div>
-                    <div class="action-btn">
-                        <a href="customerAdd.html" class="btn btn-primary btn-lg"><i class="ri-add-line"></i> Add New
-                            Customer</a>
-                        <a href="xpress.html" class="btn btn-primary btn-lg"><i class="ri-information-line"></i>
-                            Xpress
-                            Test</a>
-                    </div>
-                </div>
+            <div class="page-titles d-flex justify-content-between align-items-center">
+                <h1 class="mb-0 fw-bold">Xpress Test</h1>
+                <!-- <a href="#" onclick="history.back()" class="btn btn-primary">Back</a> -->
             </div>
+            <style>
+                .wizard-content>div {
+                    display: none;
+                }
+
+                .wizard-content>.active {
+                    display: block;
+                }
+
+                .wizard-steps ul {
+                    list-style: none;
+                    padding-left: 0;
+                    display: flex;
+                    justify-content: space-around;
+                    flex-direction: column;
+                    gap: 30px;
+                }
+
+                .wizard-steps li {
+                    text-align: center;
+                    user-select: none;
+                    position: relative;
+                }
+
+                .wizard-steps li span {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    background-color: #e6e6e6;
+                    display: flex;
+
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin: auto;
+                    color: #000;
+                    margin-bottom: 6px;
+                }
+
+                .wizard-steps li h5 {
+                    font-size: 16px;
+                    font-weight: 700;
+                }
+
+                .wizard-steps li::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    border: 1px solid #fff;
+                }
+
+                .wizard-steps li.active span {
+                    background-color: #000080;
+                    color: #fff;
+                }
+
+                .wizard-steps ul li.checked span {
+                    background-color: #28a745;
+                    color: white;
+                }
+            </style>
             <div class="container-fluid">
                 <div class="row mb-4">
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="customer.html" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Customers</span>
+                    <div class="col-lg-12">
+                        <div class="wizard">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="wizard-steps">
+                                                <ul>
+                                                    <li class="step1 active">
+                                                        <span>1</span>
+                                                        <h5>Customer</h5>
+                                                    </li>
+                                                    <li class="step2">
+                                                        <span>2</span>
+                                                        <h5>Service Location</h5>
+                                                    </li>
+                                                    <li class="step3">
+                                                        <span>3</span>
+                                                        <h5>Assembly</h5>
+                                                    </li>
+                                                    <li class="step4">
+                                                        <span>4</span>
+                                                        <h5>Perform Test</h5>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-group-line"></i>
-                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="wizard-content">
+                                                <div id="step-one" class="active">Step One
+                                                    <form action="">
+                                                        <button type="button" class="continue-btn">Continue</button>
+                                                    </form>
+                                                </div>
+                                                <div id="step-two">Step two
+                                                    <form action="">
+                                                        <button type="button" class="continue-btn">Continue</button>
+                                                    </form>
+                                                </div>
+                                                <div id="step-three">Step three
+                                                    <form action="">
+                                                        <button type="button" class="continue-btn">Continue</button>
+                                                    </form>
+                                                </div>
+                                                <div id="step-four">Step 4
+                                                    <form action="">
+                                                        <button type="button" class="continue-btn">Continue</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3">
+                                                <a href="#" class="btn btn-primary back-btn">Back step</a>
+                                                <button type="button" class="btn btn-success start-test-btn"
+                                                    style="display: none;">Start Test</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                    </div>
-
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="gauge.html" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">115</h3>
-                                            <span class="fs-6 font-w500">Total Gauges</span>
-                                        </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-dashboard-3-line"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
 
 
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="test.html" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Tests</span>
-                                        </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-user-follow-line"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 mb-3">
-                        <a href="water_purveyors.html" style="color: inherit;">
-                            <div class="card booking mb-0">
-                                <div class="card-body">
-                                    <div
-                                        class="income-data d-flex justify-content-between align-items-center mb-sm-0 mb-2 mb-sm-0 mb-2 ps-lg-0">
-                                        <div>
-                                            <h3 class="font-w600 mb-0">215</h3>
-                                            <span class="fs-6 font-w500">Total Water Purveyors</span>
-                                        </div>
-                                        <span class="income-icon style-3">
-                                            <i class="ri-briefcase-line"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
 
-                <!-- <div class="col-lg-12">
-                    <div class="card w-100">
-                        <div class="card-body">
-                            <div class="d-md-flex align-items-center">
-                                <div>
-                                    <h3 class="card-title">Overview</h3>
-                                </div>
-                            </div>
-                            <div class="chart-container">
-                                <canvas id="chart"></canvas>
-                            </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
             <footer class="footer">
                 © Copyright by <a href="dashboard.html">Valvesync</a> <span id="year"></span>. All right reserved.
             </footer>
         </div>
     </div>
-    <div class="modal fade " id="aftersignup" data-bs-backdrop="static" tabindex="-1"
-        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">Fill form</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form action="">
-                    <div class="modal-body">
-                        <h3 class="fw-bold">Testing Information</h3>
-                        <div class="row">
-                            <div class="mb-3 col-lg-6">
-                                <label class="col-md-12">Default Certification</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Default Certification"
-                                        class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="mb-3 col-lg-6">
-                                <label for="date" class="col-md-12">Certification
-                                    Expiration Date</label>
-                                <div class="col-md-12">
-                                    <input type="date" class="form-control form-control-line" name="date" id="date">
-                                </div>
-                            </div>
-                        </div>
-                        <h3 class="fw-bold">Gauge Information</h3>
-                        <div class="row ">
-                            <div class="col-lg-6 mb-3">
-                                <label for="tester">Tester</label>
-                                <select class="form-select" id="tester" name="tester">
-                                    <option value="" disabled="" hidden="" selected="">Select tester
-                                    </option>
-                                    <option value="1">Cody Creek</option>
-                                    <option value="2">Jhon doe</option>
-                                    <option value="3">Lily Jhonsen</option>
-                                </select>
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="serial">Serial</label>
-                                <input type="number" placeholder="Serial" class="form-control" id="serial"
-                                    name="serial">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6 mb-3">
-                                <label for="manufacturer">Manufacturer</label>
-                                <input type="text" placeholder="Manufacturer" class="form-control" id="manufacturer"
-                                    name="manufacturer">
-                            </div>
-                            <div class="col-lg-6  mb-3">
-                                <label for="model">Model</label>
-                                <input type="text" placeholder="Model" class="form-control" id="model" name="model">
-                            </div>
 
-                        </div>
-                        <div class="row ">
-                            <div class="col-lg-6 mb-3">
-                                <label for="cdate">Calibration Date</label>
-                                <input type="date" name="cdate" class="form-control" id="cdate">
-                            </div>
-                            <div class="col-lg-6 mb-3">
-                                <label for="expdate">Calibration Expiration Date</label>
-                                <input type="date" name="expdate" class="form-control" id="expdate">
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Skip</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/app.min.js"></script>
@@ -547,50 +489,55 @@
     <script src="../assets/js/sidebarmenu.js"></script>
     <script src="../assets/js/feather.min.js"></script>
     <script src="../assets/js/custom.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
     <script>
-        var data = {
-            labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-            datasets: [
-                {
-                    label: "Dataset #1",
-                    backgroundColor: "rgba(0,0,128,0.2)",
-                    borderColor: "rgba(0,0,128,1)",
-                    borderWidth: 2,
-                    hoverBackgroundColor: "rgba(0,0,128,0.4)",
-                    hoverBorderColor: "rgba(0,0,128,1)",
-                    data: [65, 59, 20, 81, 56, 55, 40],
-                },
-            ],
-        };
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentStep = 1;
 
-        var options = {
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    stacked: true,
-                    grid: {
-                        display: true,
-                        color: "rgba(255,99,132,0.2)",
-                    },
-                },
-                x: {
-                    grid: {
-                        display: false,
-                    },
-                },
-            },
-        };
+            const steps = document.querySelectorAll('.wizard-steps ul li');
+            const contents = document.querySelectorAll('.wizard-content > div');
+            const startTestBtn = document.querySelector('.start-test-btn');
+            const backBtn = document.querySelector('.back-btn');
 
-        new Chart("chart", {
-            type: "bar",
-            options: options,
-            data: data,
-        });
-    </script> -->
-    <script>
-        $(document).ready(function () {
-            $('#aftersignup').modal('show');
+            function showStep(step) {
+                contents.forEach((content, index) => {
+                    content.classList.toggle('active', index === step - 1);
+                });
+                steps.forEach((stepLi, index) => {
+                    stepLi.classList.toggle('active', index === step - 1);
+                });
+            }
+
+            document.querySelectorAll('.continue-btn').forEach((btn, index) => {
+                btn.addEventListener('click', function () {
+                    if (currentStep <= steps.length) {
+                        const currentSpan = steps[currentStep - 1].querySelector('span');
+                        currentSpan.innerHTML = '<i class="fa fa-check"></i>';
+                        steps[currentStep - 1].classList.add('checked');
+                        if (currentStep === steps.length) {
+                            startTestBtn.style.display = 'inline-block';
+                        }
+                        if (currentStep < steps.length) {
+                            currentStep++;
+                            showStep(currentStep);
+                        }
+                    }
+                });
+            });
+
+            backBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (currentStep > 1) {
+                    const previousStep = currentStep - 1;
+                    const previousSpan = steps[previousStep - 1].querySelector('span');
+                    previousSpan.innerHTML = previousStep;
+                    steps[previousStep - 1].classList.remove('checked');
+                    startTestBtn.style.display = 'none';
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
+
+            showStep(currentStep);
         });
     </script>
 </body>
