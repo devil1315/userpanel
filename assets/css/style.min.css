@@ -32673,3 +32673,166 @@ tbody tr:last-child {
     height: 350px;
     background: #fff;
 }
+
+#step-one h4,
+#step-two h4,
+#step-three h4,
+#step-four h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #121212;
+}
+
+#customer-step h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #121212;
+}
+
+#customer-step p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #121212;
+}
+
+.checkbox-selection {
+    width: fit-content;
+    padding: 12px;
+    gap: 8px;
+    border: 1px solid #F0F4FF;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    box-shadow: 0px 4px 14px 0px #E3E3E329;
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-custom {
+    width: 450px;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #E1EAFE;
+    box-shadow: 0px 4px 14px 0px #E3E3E329;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.customer-search a {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.suggestion {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #121212 !important;
+}
+
+.wizard-content>div {
+    display: none;
+}
+
+.wizard-content>.active {
+    display: block;
+}
+
+.wizard-steps ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.wizard-steps li {
+    text-align: center;
+    user-select: none;
+    position: relative;
+}
+
+.wizard-steps li span {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    margin: auto;
+    color: #000;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.wizard-steps li h5 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.wizard-steps li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+.wizard-steps li.active span {
+    background-color: #000080;
+    color: #fff;
+}
+
+.wizard-steps ul li.checked span {
+    background-color: #28a745;
+    color: white;
+}
+
+@media (max-width:768px) {
+    .wizard-steps ul {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .search-custom {
+        width: 100%;
+    }
+}
+
+#step-four label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #121212;
+}
+
+.line-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.value {
+    width: 30px;
+    text-align: center;
+}

@@ -334,78 +334,19 @@
         </aside>
 
         <div class="page-wrapper">
-            <div class="page-titles d-flex justify-content-between align-items-center">
+            <div class="page-titles d-flex justify-content-between align-items-center flex-wrap">
                 <h1 class="mb-0 fw-bold">Xpress Test</h1>
-                <!-- <a href="#" onclick="history.back()" class="btn btn-primary">Back</a> -->
+                <div>
+                    <a href="#" class="btn btn-primary back-btn">Back</a>
+                </div>
             </div>
-            <style>
-                .wizard-content>div {
-                    display: none;
-                }
 
-                .wizard-content>.active {
-                    display: block;
-                }
-
-                .wizard-steps ul {
-                    list-style: none;
-                    padding-left: 0;
-                    display: flex;
-                    justify-content: space-around;
-                    flex-direction: column;
-                    gap: 30px;
-                }
-
-                .wizard-steps li {
-                    text-align: center;
-                    user-select: none;
-                    position: relative;
-                }
-
-                .wizard-steps li span {
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 100%;
-                    background-color: #e6e6e6;
-                    display: flex;
-
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 16px;
-                    font-weight: 700;
-                    margin: auto;
-                    color: #000;
-                    margin-bottom: 6px;
-                }
-
-                .wizard-steps li h5 {
-                    font-size: 16px;
-                    font-weight: 700;
-                }
-
-                .wizard-steps li::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    border: 1px solid #fff;
-                }
-
-                .wizard-steps li.active span {
-                    background-color: #000080;
-                    color: #fff;
-                }
-
-                .wizard-steps ul li.checked span {
-                    background-color: #28a745;
-                    color: white;
-                }
-            </style>
             <div class="container-fluid">
                 <div class="row mb-4">
                     <div class="col-lg-12">
                         <div class="wizard">
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-12">
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="wizard-steps">
@@ -431,43 +372,475 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-9">
+                                <div class="col-lg-9 col-md-9 col-12">
                                     <div class="card">
                                         <div class="card-body">
                                             <div class="wizard-content">
-                                                <div id="step-one" class="active">Step One
-                                                    <form action="">
-                                                        <button type="button" class="continue-btn">Continue</button>
+                                                <div id="step-one" class="active">
+                                                    <h4>Customer</h4>
+                                                    <form action="" id="customer-step">
+                                                        <div class="mb-3">
+                                                            <div>
+                                                                <h4 class="mb-0">Pick customer</h4>
+                                                                <p class="mb-0">To begin testing an assembly search for
+                                                                    an
+                                                                    existing
+                                                                    customer or add a new customer</p>
+                                                                <div class="checkbox-selection mt-3">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="flexRadioDefault"
+                                                                            id="flexRadioDefault1">
+                                                                        <label class="form-check-label mb-0"
+                                                                            for="flexRadioDefault1">
+                                                                            Customers
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="radio"
+                                                                            name="flexRadioDefault"
+                                                                            id="flexRadioDefault2">
+                                                                        <label class="form-check-label mb-0"
+                                                                            for="flexRadioDefault2">
+                                                                            Serial number
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="customer-search position-relative">
+                                                                <a href="#"><i class="fa fa-search"></i></a>
+                                                                <input type="search" class="search-custom"
+                                                                    placeholder="Search for customers">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h4 class="suggestion">Suggestions</h4>
+                                                            <div class="customer-table">
+                                                                <div class="table-responsive">
+                                                                    <table
+                                                                        class="table customize-table mb-0 v-middle text-nowrap table-hover">
+                                                                        <thead class="table-light">
+                                                                            <tr>
+                                                                                <th class="border-bottom border-top">
+                                                                                </th>
+                                                                                <th class="border-bottom border-top">
+                                                                                    Customer Name</th>
+                                                                                <th class="border-bottom border-top">
+                                                                                    Address</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody id="tableList">
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckDefault">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckDefault">
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Jessica Style
+                                                                                </td>
+                                                                                <td>
+                                                                                    537 Adams St Twin Falls, ID 83301
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckDefault">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckDefault">
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Jessica Style
+                                                                                </td>
+                                                                                <td>
+                                                                                    537 Adams St Twin Falls, ID 83301
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckDefault">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckDefault">
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>
+                                                                                    Jessica Style
+                                                                                </td>
+                                                                                <td>
+                                                                                    537 Adams St Twin Falls, ID 83301
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                                                            <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                                                data-bs-target="#add_customer">Add new
+                                                                customer</a>
+                                                            <button type="button"
+                                                                class="continue-btn btn btn-primary">Next</button>
+                                                        </div>
                                                     </form>
                                                 </div>
-                                                <div id="step-two">Step two
-                                                    <form action="">
-                                                        <button type="button" class="continue-btn">Continue</button>
+                                                <div id="step-two">
+                                                    <h4>Service Location</h4>
+                                                    <form action="" id="customer-step">
+                                                        <div class="mb-3">
+                                                            <h4 class="mb-0">Select location</h4>
+                                                            <p class="mb-0">Select an existing service location from
+                                                                the list or Add New Service Location.</p>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <h4 class="suggestion">Address</h4>
+                                                            <div class="checkbox-selection mt-3">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="flexRadioDefault3">
+                                                                    <label class="form-check-label mb-0"
+                                                                        for="flexRadioDefault3">
+                                                                        537 Adams St Twin Falls, ID 83301
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkbox-selection mt-3">
+                                                                <div class="form-check ">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="flexRadioDefault4">
+                                                                    <label class="form-check-label mb-0"
+                                                                        for="flexRadioDefault4">
+                                                                        537 Adams St Twin Falls, ID 83301
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                                                            <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                                                data-bs-target="#add_location">Add new service
+                                                                location</a>
+                                                            <button type="button"
+                                                                class="continue-btn btn btn-primary">Next</button>
+                                                        </div>
                                                     </form>
                                                 </div>
-                                                <div id="step-three">Step three
-                                                    <form action="">
-                                                        <button type="button" class="continue-btn">Continue</button>
+                                                <div id="step-three">
+                                                    <h4>Assembly</h4>
+                                                    <form action="" id="customer-step">
+                                                        <div class="mb-3">
+                                                            <div>
+                                                                <h4 class="mb-0">Select assembly</h4>
+                                                                <p class="mb-0">Select an existing assembly from the
+                                                                    list to test or Add New Assembly to test a new one.
+                                                                </p>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <div class="customer-table">
+                                                                <div class="table-responsive">
+                                                                    <table class="table mb-0 table-hover">
+                                                                        <thead class="table-light">
+                                                                            <tr>
+                                                                                <th></th>
+                                                                                <th>Serial</th>
+                                                                                <th>Type</th>
+                                                                                <th>Size</th>
+                                                                                <th>Make</th>
+                                                                                <th>Model</th>
+                                                                                <th>Status</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckDefault">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckDefault">
+
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>A542875</td>
+                                                                                <td>DC
+                                                                                </td>
+                                                                                <td>
+                                                                                    1”
+                                                                                </td>
+                                                                                <td>
+                                                                                    Wilkins
+                                                                                </td>
+                                                                                <td>
+                                                                                    350XL
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <span
+                                                                                        class="badge badge-active">Active</span>
+                                                                                </td>
+
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckDefault">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckDefault">
+
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </td>
+                                                                                <td>A5428725</td>
+
+                                                                                <td>DC
+                                                                                </td>
+                                                                                <td>
+                                                                                    2”
+                                                                                </td>
+                                                                                <td>
+                                                                                    Wilkins
+                                                                                </td>
+                                                                                <td>
+                                                                                    350XxL
+                                                                                </td>
+
+                                                                                <td>
+                                                                                    <span
+                                                                                        class="badge badge-active">Active</span>
+                                                                                </td>
+
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex gap-2 align-items-center flex-wrap">
+                                                            <a href="#" class="btn btn-primary" data-bs-toggle="modal"
+                                                                data-bs-target="#add_assemby">Add new assembly</a>
+                                                            <button type="button"
+                                                                class="continue-btn btn btn-primary">Next</button>
+                                                        </div>
                                                     </form>
                                                 </div>
-                                                <div id="step-four">Step 4
-                                                    <form action="">
-                                                        <button type="button" class="continue-btn">Continue</button>
+                                                <div id="step-four">
+                                                    <h4>Perform test</h4>
+                                                    <form action="" id="customer-step">
+                                                        <div class="mb-4">
+                                                            <label for="astatus">Assembly status</label>
+                                                            <select name="astatus" class="form-select" id="astatus">
+                                                                <option value="select" hidden disabled selected>Select
+                                                                    Assembly
+                                                                    status
+                                                                </option>
+                                                                <option value="">Existing assembly</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="testcomplete">Test completed at</label>
+                                                            <input type="date" class="form-control"
+                                                                placeholder="Test completed at" name="testcomplete"
+                                                                id="testcomplete">
+                                                            <span>Leave blank to automatically set when the test is
+                                                                completed</span>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="tester">Tester</label>
+                                                            <select name="tester" class="form-select" id="tester">
+                                                                <option value="select" hidden disabled selected>Pick
+                                                                    Tester
+                                                                </option>
+                                                                <option value="">Jhone</option>
+                                                            </select>
+                                                            <div class="form-check my-2">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="tester1">
+                                                                <label class="form-check-label fw-medium mb-0"
+                                                                    for="tester1">
+                                                                    I am the tester
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="Gauge">Gauge</label>
+                                                            <select name="Gauge" class="form-select" id="Gauge">
+                                                                <option value="select" hidden disabled selected>
+                                                                    Pick Gauge
+                                                                </option>
+                                                                <option value="">Jhone</option>
+                                                            </select>
+                                                            <div class="form-check my-2">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="gauge1">
+                                                                <label class="form-check-label fw-medium mb-0"
+                                                                    for="gauge1">
+                                                                    Use default gauge
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="psi">Check #2 PSI</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter PSI 2">
+                                                            <div class="my-2">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="psi1">
+                                                                    <label class="form-check-label" for="psi1">
+                                                                        Tight
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="psi2" checked>
+                                                                    <label class="form-check-label" for="psi2">
+                                                                        Leaked
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="mread">Meter reading</label>
+                                                            <input type="text" class="form-control" id="mread"
+                                                                placeholder="Meter Reading">
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="agp">Air gap provided</label>
+                                                            <div class="my-2">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="agp1">
+                                                                    <label class="form-check-label" for="agp1">
+                                                                        Yes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="agp2" checked>
+                                                                    <label class="form-check-label" for="agp2">
+                                                                        No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="boau">Bleed off assembly used</label>
+                                                            <div class="my-2">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="boau1">
+                                                                    <label class="form-check-label" for="boau1">
+                                                                        Yes
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="boau2" checked>
+                                                                    <label class="form-check-label" for="boau2">
+                                                                        No
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="sl">SOV leaking</label>
+                                                            <select name="sl" class="form-select" id="sl">
+                                                                <option value="select" hidden="" disabled=""
+                                                                    selected="">
+                                                                    Pick SOV leaking
+                                                                </option>
+                                                                <option value="">Jhone</option>
+                                                            </select>
+                                                            <div class="form-check my-2">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="sl1">
+                                                                <label class="form-check-label fw-medium mb-0"
+                                                                    for="sl1">
+                                                                    Use default gauge
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="result">Result</label>
+                                                            <div class="my-2">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="result1">
+                                                                    <label class="form-check-label" for="result1">
+                                                                        Passed
+                                                                    </label>
+                                                                </div>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="result2" checked>
+                                                                    <label class="form-check-label" for="result2">
+                                                                        Failed
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-4">
+                                                            <label for="result">Line pressure</label>
+                                                            <div>
+                                                                <div class="line-container">
+                                                                    <div class="button" onclick="decrement()">-</div>
+                                                                    <div class="value" id="value">1</div>
+                                                                    <div class="button" onclick="increment()">+</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-check my-2">
+                                                                <input class="form-check-input" type="checkbox" value=""
+                                                                    id="lp1">
+                                                                <label class="form-check-label fw-medium mb-0"
+                                                                    for="lp1">
+                                                                    Service restored
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-4">
+                                                            <label for="rcoment">Report comment</label>
+                                                            <textarea type="text" rows="4" class="form-control"
+                                                                id="rcoment" placeholder="Report Comment"></textarea>
+                                                        </div>
+                                                        <div class="mb-4">
+                                                            <label for="icoment">Internal comment</label>
+                                                            <textarea type="text" rows="4" class="form-control"
+                                                                id="icoment" placeholder="Internal comment"></textarea>
+                                                        </div>
+                                                        <div>
+                                                            <button type="submit"
+                                                                class="continue-btn btn btn-primary">Submit</button>
+                                                        </div>
                                                     </form>
                                                 </div>
-                                            </div>
-                                            <div class="mt-3">
-                                                <a href="#" class="btn btn-primary back-btn">Back step</a>
-                                                <button type="button" class="btn btn-success start-test-btn"
-                                                    style="display: none;">Start Test</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
@@ -477,7 +850,338 @@
             </footer>
         </div>
     </div>
+    <div class="modal fade" id="add_customer" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Add Customer</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+                        <div class="mb-4">
+                            <label for="cprofile">Customer Profile</label>
+                            <input type="file" class="form-control" id="cprofile">
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="fname">Full Name</label>
+                                <input type="text" placeholder="Enter full name" class="form-control" id="fname">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="email">Customers email</label>
+                                <input type="email" placeholder="Enter customers email" class="form-control" id="email">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="number">Phone</label>
+                                <input type="number" placeholder="Enter phone number" class="form-control" id="number">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="ph2">Phone 2</label>
+                                <input type="number" placeholder="Enter phone number 2" class="form-control" id="ph2">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="address1">Address line 1</label>
+                                <input type="text" placeholder="Enter customers address line 1" class="form-control"
+                                    id="address1">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="address2">Address line 2</label>
+                                <input type="text" placeholder="Enter customers address line 2" class="form-control"
+                                    id="address2">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-6 mb-3">
+                                <label for="city">City</label>
+                                <select class="form-select" id="city">
+                                    <option value="" disabled="" hidden="" selected="">Select City</option>
+                                    <option value="New York">New York</option>
+                                    <option value="Los Angeles">Los Angeles</option>
+                                    <option value="Chicago">Chicago</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <label for="state">State</label>
+                                <select class="form-select" id="state">
+                                    <option value="" disabled="" hidden="" selected="">Select State</option>
+                                    <option value="New York">New York</option>
+                                    <option value="California">California</option>
+                                    <option value="Illinois">Illinois</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="zipcode">Zip code</label>
+                                <input type="number" placeholder="Enter customers zip code" class="form-control"
+                                    id="zipcode">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <label for="cperson">Contact person</label>
+                            <input type="number" placeholder="Enter customers contact person number"
+                                class="form-control" id="cperson">
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <label for="comment">Comment</label>
+                            <textarea type="text" rows="6" placeholder="Comment on this customer" class="form-control"
+                                id="comment"></textarea>
+                        </div>
+                        <div>
+                            <!-- <a href="#" class="btn btn-primary">Add Customer</a> -->
+                            <button type="submit" class="btn btn-primary">Add Customer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="add_location" tabindex="-1" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Add New Location</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
 
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="address1">Address line 1</label>
+                                <input type="text" placeholder="Enter customers address line 1" class="form-control"
+                                    id="address1">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="address2">Address line 2</label>
+                                <input type="text" placeholder="Enter customers address line 2" class="form-control"
+                                    id="address2">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-6 mb-3">
+                                <label for="city">City</label>
+                                <select class="form-select" id="city">
+                                    <option value="" disabled="" hidden="" selected="">Select City</option>
+                                    <option value="New York">New York</option>
+                                    <option value="Los Angeles">Los Angeles</option>
+                                    <option value="Chicago">Chicago</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 mb-3">
+                                <label for="state">State</label>
+                                <select class="form-select" id="state">
+                                    <option value="" disabled="" hidden="" selected="">Select State</option>
+                                    <option value="New York">New York</option>
+                                    <option value="California">California</option>
+                                    <option value="Illinois">Illinois</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-12">
+                                <label for="zipcode">Zip code</label>
+                                <input type="number" placeholder="Enter customers zip code" class="form-control"
+                                    id="zipcode">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <label for="status">Status</label>
+                            <select class="form-select" id="status">
+                                <option value="" disabled="" hidden="" selected="">Select State</option>
+                                <option value="Active">Active</option>
+                                <option value="Pending">Pending</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <label for="cperson">Phone (optional)</label>
+                            <input type="number" placeholder="Enter customers contact person number"
+                                class="form-control" id="cperson">
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <label for="comment">Comment (optional)</label>
+                            <textarea type="text" rows="6" placeholder="Comment on this customer" class="form-control"
+                                id="comment"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Add Customer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="add_assemby" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalCenterTitle">Add New Assembly</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#">
+                    <div class="modal-body">
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="type">Type</label>
+                                <select class="form-control">
+                                    <option value="" selected="" disabled="" hidden="">Select Type</option>
+                                    <option value="1">Double Check</option>
+                                    <option value="2">Double Check Detector Assembly</option>
+                                    <option value="3">Reduced Pressure Zone Assembly </option>
+                                    <option value="4">Reduced Pressure Detector Assembly </option>
+                                    <option value="5">Pressure Vacuum Breaker</option>
+                                    <option value="6">Spill-Resistant Vacuum Breaker</option>
+                                    <option value="7">Air-Gap</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="wp">Water Purveyor</label>
+                                <select class="form-control">
+                                    <option value="" selected="" disabled="" hidden="">Select Water Purveyor
+                                    </option>
+                                    <option value="1">Hailey, ID</option>
+                                    <option value="2">Jerome, Idaho</option>
+                                    <option value="3">Twin Falls Water</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="size">Size</label>
+                                <select class="form-control">
+                                    <option value="" selected="" disabled="" hidden="">Select size</option>
+                                    <option value="1/4">1/4"</option>
+                                    <option value="1/2">1/2"</option>
+                                    <option value="3/4">3/4"</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="manufacture">Manufacturer</label>
+                                <select class="form-control">
+                                    <option value="" selected="" disabled="" hidden="">Select manufacturer</option>
+                                    <option value="american">American Dish</option>
+                                    <option value="apollo">Apollo</option>
+                                    <option value="ames">Ames</option>
+                                    <option value="ari">A.R.I.</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="model">Model</label>
+                                <select class="form-control">
+                                    <option value="" selected="" disabled="" hidden="">Select model</option>
+                                    <option value="001M1">001 M1</option>
+                                    <option value="001M1QT">001M1QT</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="serial">Serial</label>
+                                <input type="text" placeholder="Enter serial no." class="form-control" id="serial">
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="email">Email</label>
+                                <input type="text" placeholder="Enter email" class="form-control" id="email">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="hazard">Hazard type</label>
+                                <select class="form-control">
+                                    <option value="" selected="" disabled="" hidden="">Select hazard type</option>
+                                    <option value="irrigation">Irrigation</option>
+                                    <option value="boiler">Boiler</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="testing">Testing frequency</label>
+                                <select class="form-select">
+                                    <option selected="selected" disabled="" hidden="">Select testing
+                                        frequency</option>
+                                    <option value="test_annually">Annually</option>
+                                    <option value="test_semi_annually">Semi-Annually</option>
+                                    <option value="test_quarterly">Quarterly</option>
+                                    <option value="test_monthly">Monthly</option>
+                                    <option value="test_every_2_months">Every 2 Months</option>
+                                    <option value="test_every_year_and_half">Every 1.5 Years</option>
+                                    <option value="test_bi_annually">Every 2 Years</option>
+                                    <option value="test_every_2_and_half_years">Every 2.5 Years</option>
+                                    <option value="test_tri_annually">Every 3 years</option>
+                                    <option value="test_every_3_and_half_years">Every 3.5 Years</option>
+                                    <option value="test_every_4_years">Every 4 Years</option>
+                                    <option value="test_every_4_and_half_years">Every 4.5 Years</option>
+                                    <option value="test_every_5_years">Every 5 Years</option>
+                                    <option value="test_every_5_and_half_years">Every 5.5 Years</option>
+                                    <option value="test_every_6_years">Every 6 Years</option>
+                                    <option value="test_every_6_and_half_years">Every 6.5 Years</option>
+                                    <option value="test_every_7_years">Every 7 Years</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="nmonth">Notification month</label>
+                                <select class="form-select">
+                                    <option value="" selected="" hidden="" disabled="">Select month</option>
+                                    <option value="january">January</option>
+                                    <option value="february">February</option>
+                                    <option value="march">March</option>
+                                    <option selected="selected" value="april">April</option>
+                                    <option value="may">May</option>
+                                    <option value="june">June</option>
+                                    <option value="july">July</option>
+                                    <option value="august">August</option>
+                                    <option value="september">September</option>
+                                    <option value="october">October</option>
+                                    <option value="november">November</option>
+                                    <option value="december">December</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="idate">Install date</label>
+                                <input type="date" class="form-control" placeholder="Select install date">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="ltested">Last tested</label>
+                                <input type="date" class="form-control" placeholder="Select install date">
+                            </div>
+
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <label for="ntdate">Next test due</label>
+                                <input type="date" class="form-control" placeholder="Select install date">
+                            </div>
+                            <div class="col-lg-6">
+                                <label for="lnotified">Last notified</label>
+                                <input type="date" class="form-control" placeholder="Select last notified date">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mb-4">
+                            <label for="rat">Remove at</label>
+                            <input type="date" class="form-control" placeholder="Select Remove at date">
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Add Assembly</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/app.min.js"></script>
@@ -495,7 +1199,6 @@
 
             const steps = document.querySelectorAll('.wizard-steps ul li');
             const contents = document.querySelectorAll('.wizard-content > div');
-            const startTestBtn = document.querySelector('.start-test-btn');
             const backBtn = document.querySelector('.back-btn');
 
             function showStep(step) {
@@ -505,6 +1208,11 @@
                 steps.forEach((stepLi, index) => {
                     stepLi.classList.toggle('active', index === step - 1);
                 });
+                if (step === 1) {
+                    backBtn.style.display = 'none';
+                } else {
+                    backBtn.style.display = 'inline-block';
+                }
             }
 
             document.querySelectorAll('.continue-btn').forEach((btn, index) => {
@@ -513,9 +1221,6 @@
                         const currentSpan = steps[currentStep - 1].querySelector('span');
                         currentSpan.innerHTML = '<i class="fa fa-check"></i>';
                         steps[currentStep - 1].classList.add('checked');
-                        if (currentStep === steps.length) {
-                            startTestBtn.style.display = 'inline-block';
-                        }
                         if (currentStep < steps.length) {
                             currentStep++;
                             showStep(currentStep);
@@ -527,18 +1232,41 @@
             backBtn.addEventListener('click', function (e) {
                 e.preventDefault();
                 if (currentStep > 1) {
+                    if (currentStep === steps.length) {
+                        const lastSpan = steps[currentStep - 1].querySelector('span');
+                        lastSpan.innerHTML = currentStep;
+                        steps[currentStep - 1].classList.remove('checked');
+                    }
                     const previousStep = currentStep - 1;
                     const previousSpan = steps[previousStep - 1].querySelector('span');
                     previousSpan.innerHTML = previousStep;
                     steps[previousStep - 1].classList.remove('checked');
-                    startTestBtn.style.display = 'none';
                     currentStep--;
                     showStep(currentStep);
                 }
             });
-
+            backBtn.style.display = 'none';
             showStep(currentStep);
         });
+    </script>
+
+
+
+    <script>
+        let valueElement = document.getElementById('value');
+        let value = parseInt(valueElement.innerText);
+
+        function increment() {
+            value++;
+            valueElement.innerText = value;
+        }
+
+        function decrement() {
+            if (value > 0) {
+                value--;
+                valueElement.innerText = value;
+            }
+        }
     </script>
 </body>
 
